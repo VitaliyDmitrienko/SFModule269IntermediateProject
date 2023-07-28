@@ -1,4 +1,4 @@
-// Module 25.9 intermediate project (XLSX-file reader)
+// Module 26.9 intermediate project (Student/University method's comparator)
 package org.example;
 
 
@@ -15,7 +15,7 @@ import java.util.Iterator;
 
 public class XLSXFileReader {
 
-    private XLSXFileReader (){
+    private XLSXFileReader () {
         System.out.println("Private constructor.");
         System.out.println("Forbidden to create this class instance.");
     }
@@ -55,10 +55,6 @@ public class XLSXFileReader {
 
         while (iterator.hasNext()) {
             Row cells = iterator.next();
-            if (cells.getCell(0) == null) {
-                break;
-            }
-
             if (cells.getCell(0) == null) {
                 break;
             }
@@ -130,11 +126,6 @@ public class XLSXFileReader {
             if (cells.getCell(0) == null) {
                 break;
             }
-
-            if (cells.getCell(0) == null) {
-                break;
-            }
-
 
 //            Version #1: add new University to List by abstract class
 //            universityDataStorageExtractor.add(new University(

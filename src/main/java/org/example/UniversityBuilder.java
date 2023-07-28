@@ -1,4 +1,4 @@
-// Module 25.9 intermediate project (XLSX-file reader)
+// Module 26.9 intermediate project (Student/University method's comparator)
 package org.example;
 
 public class UniversityBuilder {
