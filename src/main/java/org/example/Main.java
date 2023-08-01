@@ -23,10 +23,20 @@ public class Main {
         List<Student> studentDataStorage = new ArrayList<>(XLSXFileReader.getStudentData());
         List<University> universityDataStorage = new ArrayList<>(XLSXFileReader.getUniversityData());
 
-        List<IStudentComparator> studentComparatorList =
-                new ArrayList((Collection) UnitedComparator.getStudentComparator(EStudentMethodComparator.STUDENT_CURRENT_COURSE_COMPARATOR));
+        IStudentComparator studentComparator =
+                UnitedComparator.getStudentComparator(EStudentMethodComparator.STUDENT_AVG_EXAM_SCORE_COMPARATOR);
+//        List<IStudentComparator> studentComparatorList =
+//                new ArrayList((Collection) UnitedComparator.getStudentComparator(EStudentMethodComparator.STUDENT_CURRENT_COURSE_COMPARATOR));
         List<IUniversityComparator> universityComparatorList = new ArrayList();
 
-        studentDataStorage.stream().sorted((Comparator<? super Student>) studentComparatorList).forEach(System.out::println);
+        studentDataStorage.stream().sorted(studentComparator).forEach(System.out::println);
+//        studentDataStorage.stream().sorted((Comparator<? super Student>) studentComparator).forEach(System.out::println);
+
+        IUniversityComparator universityComparator =
+                UnitedComparator.getUniversityComparator(EUniversityMethodComparator.UNIVERSITY_YEAR_OF_FOUNDATION_COMPARATOR);
+
+        universityDataStorage.stream().sorted(universityComparator).forEach(System.out::println);
+
+
     }
 }
