@@ -3,7 +3,7 @@ package org.example;
 
 public class UniversityYearOfFoundationComparator implements IUniversityComparator {
     @Override
-    public int compare(University o1, University o2) {
-        return o1.getYearOfFoundation() - o2.getYearOfFoundation();
+    public static int compare(University o1, University o2) {
+        return Integer.compare(o1.getYearOfFoundation(), o2.getYearOfFoundation());
     }
 }
