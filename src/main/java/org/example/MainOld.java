@@ -4,13 +4,9 @@ package org.example;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Comparator;
 import java.util.List;
 
-import static org.apache.commons.lang3.stream.Streams.stream;
-
-public class Main {
+public class MainOld {
 
     public static void main(String[] args) throws IOException {
 
@@ -20,13 +16,19 @@ public class Main {
 //        Class UnitedComparator() has private constructor & forbidden to create instance
 //        System.out.println(new UnitedComparator());
 
+
         List<Student> studentDataStorage = new ArrayList<>(XLSXFileReader.getStudentData());
         List<University> universityDataStorage = new ArrayList<>(XLSXFileReader.getUniversityData());
 
-        List<IStudentComparator> studentComparatorList =
-                new ArrayList((Collection) UnitedComparator.getStudentComparator(EStudentMethodComparator.STUDENT_CURRENT_COURSE_COMPARATOR));
-        List<IUniversityComparator> universityComparatorList = new ArrayList();
+        for (Student student: studentDataStorage) {
+            System.out.println(student);
+        }
+        System.out.println();
 
-        studentDataStorage.stream().sorted((Comparator<? super Student>) studentComparatorList).forEach(System.out::println);
+        for (University university: universityDataStorage) {
+            System.out.println(university);
+        }
+        System.out.println();
+
     }
 }

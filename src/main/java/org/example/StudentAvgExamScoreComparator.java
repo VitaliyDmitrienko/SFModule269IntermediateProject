@@ -3,7 +3,7 @@ package org.example;
 
 public class StudentAvgExamScoreComparator implements IStudentComparator {
     @Override
-    public static int compare(Student o1, Student o2) {
+    public int compare(Student o1, Student o2) {
 
         return Float.compare(o1.getAvgExamScore(), o2.getAvgExamScore());
     }

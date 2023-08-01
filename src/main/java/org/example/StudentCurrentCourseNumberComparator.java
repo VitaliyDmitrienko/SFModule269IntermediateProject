@@ -3,7 +3,7 @@ package org.example;
 
 public class StudentCurrentCourseNumberComparator implements IStudentComparator {
     @Override
-    public static int compare(Student o1, Student o2) {
+    public int compare(Student o1, Student o2) {
         return Integer.compare(o1.getCurrentCourseNumber(), o2.getCurrentCourseNumber());
     }
 }
