@@ -1,11 +1,12 @@
 // Module 26.9 intermediate project (Student/University method's comparator)
-package org.example;
+package org.example.comparators.studentComparators;
 
 import org.apache.commons.lang3.StringUtils;
+import org.example.models.Student;
 
-public class UniversityFullNameComparator implements IUniversityComparator {
+public class StudentFullNameComparator implements IStudentComparator {
     @Override
-    public int compare(University o1, University o2) {
+    public int compare(Student o1, Student o2) {
         return StringUtils.compare(o1.getFullName(),o2.getFullName());
     }
 }

@@ -1,5 +1,7 @@
 // Module 26.9 intermediate project (Student/University method's comparator)
-package org.example;
+package org.example.models;
+
+import org.example.enums.StudyProfile;
 
 public class University {
     private final String id;
@@ -39,7 +41,7 @@ public class University {
                 '}';
     }
 
-    University (String id, String fullName, String shortName, int yearOfFoundation, StudyProfile mainProfile) {
+    public University(String id, String fullName, String shortName, int yearOfFoundation, StudyProfile mainProfile) {
         this.id = id;
         this.fullName = fullName;
         this.shortName = shortName;

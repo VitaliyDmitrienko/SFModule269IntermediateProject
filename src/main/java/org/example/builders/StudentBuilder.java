@@ -1,5 +1,7 @@
 // Module 26.9 intermediate project (Student/University method's comparator)
-package org.example;
+package org.example.builders;
+
+import org.example.models.Student;
 
 public class StudentBuilder {
     private String fullName;

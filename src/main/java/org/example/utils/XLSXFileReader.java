@@ -1,10 +1,15 @@
 // Module 26.9 intermediate project (Student/University method's comparator)
-package org.example;
+package org.example.utils;
 
 
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.example.builders.StudentBuilder;
+import org.example.builders.UniversityBuilder;
+import org.example.enums.StudyProfile;
+import org.example.models.Student;
+import org.example.models.University;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

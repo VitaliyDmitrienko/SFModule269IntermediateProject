@@ -1,5 +1,5 @@
 // Module 26.9 intermediate project (Student/University method's comparator)
-package org.example;
+package org.example.enums;
 
 public enum StudyProfile {
     ADMINISTRATION("Администрирование"),

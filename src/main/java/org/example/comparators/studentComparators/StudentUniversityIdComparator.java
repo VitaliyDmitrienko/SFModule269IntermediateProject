@@ -1,7 +1,8 @@
 // Module 26.9 intermediate project (Student/University method's comparator)
-package org.example;
+package org.example.comparators.studentComparators;
 
 import org.apache.commons.lang3.StringUtils;
+import org.example.models.Student;
 
 public class StudentUniversityIdComparator implements IStudentComparator {
     @Override

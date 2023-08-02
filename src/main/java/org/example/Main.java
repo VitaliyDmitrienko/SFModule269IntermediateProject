@@ -2,13 +2,19 @@
 package org.example;
 
 
+import org.example.comparators.studentComparators.IStudentComparator;
+import org.example.comparators.universityComparators.IUniversityComparator;
+import org.example.enums.EStudentMethodComparator;
+import org.example.enums.EUniversityMethodComparator;
+import org.example.models.Student;
+import org.example.models.University;
+import org.example.utils.UnitedComparator;
+import org.example.utils.XLSXFileReader;
+
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Comparator;
 import java.util.List;
 
-import static org.apache.commons.lang3.stream.Streams.stream;
 
 public class Main {
 
@@ -27,15 +33,19 @@ public class Main {
                 UnitedComparator.getStudentComparator(EStudentMethodComparator.STUDENT_AVG_EXAM_SCORE_COMPARATOR);
 //        List<IStudentComparator> studentComparatorList =
 //                new ArrayList((Collection) UnitedComparator.getStudentComparator(EStudentMethodComparator.STUDENT_CURRENT_COURSE_COMPARATOR));
-        List<IUniversityComparator> universityComparatorList = new ArrayList();
+//        List<IUniversityComparator> universityComparatorList = new ArrayList();
 
-        studentDataStorage.stream().sorted(studentComparator).forEach(System.out::println);
 //        studentDataStorage.stream().sorted((Comparator<? super Student>) studentComparator).forEach(System.out::println);
+        studentDataStorage.stream().sorted(studentComparator).forEach(System.out::println);
+        System.out.println();
 
+//        IUniversityComparator universityComparator =
+//                UnitedComparator.getUniversityComparator(EUniversityMethodComparator.UNIVERSITY_YEAR_OF_FOUNDATION_COMPARATOR);
         IUniversityComparator universityComparator =
-                UnitedComparator.getUniversityComparator(EUniversityMethodComparator.UNIVERSITY_YEAR_OF_FOUNDATION_COMPARATOR);
+                UnitedComparator.getUniversityComparator(EUniversityMethodComparator.UNIVERSITY_MAIN_PROFILE_COMPARATOR);
 
         universityDataStorage.stream().sorted(universityComparator).forEach(System.out::println);
+        System.out.println();
 
 
     }

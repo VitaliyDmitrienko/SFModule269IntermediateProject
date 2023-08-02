@@ -1,4 +1,9 @@
-package org.example;
+package org.example.utils;
+
+import org.example.comparators.studentComparators.*;
+import org.example.comparators.universityComparators.*;
+import org.example.enums.EStudentMethodComparator;
+import org.example.enums.EUniversityMethodComparator;
 
 public final class UnitedComparator {
     private UnitedComparator() {

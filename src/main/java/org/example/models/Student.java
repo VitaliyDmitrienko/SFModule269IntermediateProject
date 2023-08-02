@@ -1,5 +1,5 @@
 // Module 26.9 intermediate project (Student/University method's comparator)
-package org.example;
+package org.example.models;
 
 public class Student {
     private final String fullName;
@@ -33,7 +33,7 @@ public class Student {
                 '}';
     }
 
-    Student (String fullName, String universityId, int currentCourseNumber, float avgExamScore) {
+    public Student(String fullName, String universityId, int currentCourseNumber, float avgExamScore) {
         this.fullName = fullName;
         this.universityId = universityId;
         this.currentCourseNumber = currentCourseNumber;
